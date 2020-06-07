@@ -19,7 +19,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/dslab
+      - .:/ds_lab_react_gem
       - gems:/gems
     stdin_open: true
     tty: true
