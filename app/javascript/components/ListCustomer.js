@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-class ListCustomer extends React.Component {
+class HelloWorld extends React.Component {
   render () {
     console.log(this.props);
     const listItems = this.props.customers.map((customer) => <li key={customer.name}>{customer.name}</li>);
@@ -13,7 +13,7 @@ class ListCustomer extends React.Component {
   }
 }
 
-ListCustomer.propTypes = {
+HelloWorld.propTypes = {
   customers: PropTypes.array
 };
-export default ListCustomer
+export default HelloWorld
