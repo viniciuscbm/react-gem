@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Button, List } from "acmesquita-ui"
+import { Button, List, TableDefault, TableHeaderDefault, TableCellDefault, TableBodyDefault, TableRowDefault } from "acmesquita-ui"
 
 class ListCustomer extends React.Component {
 
@@ -18,6 +18,24 @@ class ListCustomer extends React.Component {
             'Maria'
           ]}
         />
+        <TableDefault>
+          <TableHeaderDefault>
+            <TableCellDefault>Nome</TableCellDefault>
+            <TableCellDefault>Email</TableCellDefault>
+          </TableHeaderDefault>
+          <TableBodyDefault>
+            {this.props.customers.map((customer) => (
+              <TableRowDefault key={customer.id}>
+                <TableCellDefault
+                  component="th"
+                  scope="row"
+                >{customer.name}</TableCellDefault>
+                <TableCellDefault>{customer.email}</TableCellDefault>
+              </TableRowDefault>
+            ))
+            }
+          </TableBodyDefault>
+        </TableDefault>
       </div>
     );
   }
