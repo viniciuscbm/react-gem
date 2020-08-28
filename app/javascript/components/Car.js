@@ -1,4 +1,5 @@
 import React from "react"
+import Button from '@material-ui/core/Button';
 
 class Car extends React.Component{
   constructor(props){
@@ -32,8 +33,8 @@ class Car extends React.Component{
       <div>
         {name}
         {age}
-        <button onClick={() => this.handleEdit()}>{this.state.editable? 'Atualizar' : 'Editar'}</button>
-        <button onClick={() => this.props.handleDelete(this.props.car.id)}>Excluir </button>
+        <Button variant="contained" color="primary" onClick={() => this.handleEdit()}>{this.state.editable ? 'Atualizar' : 'Editar'} </Button>
+        <Button variant="contained" color="secondary" onClick={() => this.props.handleDelete(this.props.car.id)}>Excliur</Button>
       </div>
     )
   }

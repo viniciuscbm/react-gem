@@ -55,7 +55,6 @@ class Service extends React.Component {
       })
   }
 
-
   addNewCar(car){ this.setState({cars: this.state.cars.concat(car)}) }
 
   deleteCar(id){

@@ -7,7 +7,6 @@ class List extends React.Component {
      return(
       <div key={car.id}>
        <Car car={car} handleDelete={this.props.handleDelete} handleUpdate={this.props.handleUpdate}/>
-       <hr></hr>
       </div>
      )
     })
