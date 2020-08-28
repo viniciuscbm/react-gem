@@ -1,24 +1,12 @@
-# README
+Esse projeto utiliza Rails e React, é um simples CRUD de uma abordagem de utilização do React dentro Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Para executar o projeto siga os passos abaixo:
 
-Things you may want to cover:
+1. No console, execute: `docker-compose build`
+2. No console, execute: `docker-compose run --rm web bundle exec rails db:reset`
+3. No console, execute: `docker-compose up`
+4. Pelo navegador acesse: http://localhost:3000
 
-* Ruby version
+Resultado esperado:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://user-images.githubusercontent.com/15777722/91604569-4b167680-e945-11ea-89cf-dd89496e964d.png)
