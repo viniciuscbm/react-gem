@@ -20,10 +20,23 @@ services:
       - "3000:3000"
     volumes:
       - .:/ds_lab_react_gem
-      - gems:/gems
+      - gems:/ds_lab_react_gem/bundle/gems
+      - node_modules:/ds_lab_react_gem/node_modules
     stdin_open: true
     tty: true
+
+  webpack:
+    image: react-gem_app:latest
+    command: ./bin/webpack-dev-server
+    ports:
+      - '3035:3035'
+    depends_on:
+      - app
+    volumes:
+      - .:/app
+      - node_modules:/ds_lab_react_gem/node_modules
 
 volumes:
   gems:
   pg_data:
+  node_modules:
